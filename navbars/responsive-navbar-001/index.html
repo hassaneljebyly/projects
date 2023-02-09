@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+    <title>Document</title>
+  </head>
+  <body class="bg-secondary-100">
+    <header class="bg-primary-900">
+      <a style="position: absolute; transform: translateY(-100%)" class="bg-secondary-100 text-neutral-100 skip-nav-links" href="#main-content">skip to main content</a>
+      <div class="container flex">
+        <button class="open-menu-btn" id="open-menu-btn" aria-label="open menu button">
+          <svg class="icon" aria-hidden="true" focusable="false" height="20" width="20">
+            <use xlink:href="./icons.svg#menu"></use>
+          </svg>
+        </button>
+        <div aria-label="logo" class="logo">
+          <svg aria-hidden="true" focusable="false" class="icon" height="35" width="35">
+            <use xlink:href="./icons.svg#logo-alipay"></use>
+          </svg>
+        </div>
+        <nav id="navigation-menu" role="navigation">
+          <ul role="list" class="flex">
+            <li role="listitem"><a class="text-secondary-100 fw-semi-bold" href="#">Home</a></li>
+            <li role="listitem"><a class="text-secondary-100 fw-semi-bold" href="#">About</a></li>
+            <li role="listitem"><a class="text-secondary-100 fw-semi-bold" href="#">Blogs</a></li>
+            <li role="listitem"><a class="text-secondary-100 fw-semi-bold" href="#">Contact</a></li>
+            <li role="listitem"><a class="text-secondary-100 fw-semi-bold" href="#">Feedback</a></li>
+          </ul>
+        </nav>
+        <form action="" id="search-input" method="get" class="search-form flex">
+          <input class="bg-primary-800 text-secondary-100" type="search" aria-label="Search" placeholder="Search" />
+          <button class="bg-neutral-100" type="submit" aria-label="submit search button">
+            <svg aria-hidden="true" focusable="false" class="icon" height="20" width="20">
+              <use xlink:href="./icons.svg#search"></use>
+            </svg>
+          </button>
+        </form>
+        <button class="close-menu-btn" id="close-menu-btn" aria-label="close navigation menu" style="background-color: transparent">
+          <svg class="icon" height="20" width="20" focusable="false" aria-hidden="true">
+            <use xlink:href="./icons.svg#close"></use>
+          </svg>
+        </button>
+        <button id="toggle-search-btn" class="open-search-btn" aria-label="open search button" style="background-color: transparent">
+          <svg class="icon" height="20" width="20" focusable="false" aria-hidden="true">
+            <use id="toggle-search-btn-icon" xlink:href="./icons.svg#search"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main-content">
+      <h1 class="fw-bold fs--primary-heading">
+        <span class="text-primary-900 bg-secondary-100">responsive navbar</span><br />
+        <span class="text-secondary-100 bg-primary-900">with search box</span><br />
+        <span class="text-primary-900 bg-secondary-100" style="border: 4px solid var(--clr-primary-900)">html css & javascript</span>
+      </h1>
+    </main>
+  </body>
+</html>

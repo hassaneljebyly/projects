@@ -1,0 +1,523 @@
+:root {
+  --clr-primary-200: #607792;
+  --clr-primary-700: #47586c;
+  --clr-primary-800: #2e3946;
+  --clr-primary-900: #151a20;
+
+  --clr-secondary-100: #f2f2f2;
+  --clr-secondary-200: #bfbfbf;
+  --clr-secondary-300: #8c8c8c;
+
+  --clr-neutral-100: #ff3e01;
+  --clr-neutral-200: #ff3e01;
+
+  --font-family-primary: 'Roboto', sans-serif;
+  /* font family */
+  --ff-primary: var(--font-family-primary);
+  --ff-body: var(--ff-primary);
+  --ff-nav: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  /* font weight */
+  --fw-regular: 300;
+  --fw-semi-bold: 400;
+  --fw-bold: 500;
+  --fw-extra-bold: 600;
+
+  /* font size */
+  --fs-100: 0.512rem;
+  --fs-200: 0.64rem;
+  --fs-300: 0.8rem;
+  --fs-400: 1rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.563rem;
+  --fs-700: 1.953rem;
+  --fs-800: 2.441rem;
+  --fs-900: 3.052rem;
+
+  --fs-body: var(--fs-400);
+  --fs-primary-heading: var(--fs-600);
+  --fs-nav: var(--fs-400);
+}
+
+
+@media screen and (min-width: 700px) {
+  :root {
+    --fs-primary-heading: var(--fs-800)
+  }
+}
+
+/*======================================= CSS RESET =======================================
+  by Andy Bell : https://andy-bell.co.uk/a-modern-css-reset/ 
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+    -o-transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* make focus visible when keyboard is used to navigate*/
+*:focus-visible {
+  /* Draw the focus when :focus-visible is supported */
+  outline: 3px solid deepskyblue;
+  outline-offset: 3px;
+}
+
+@supports not selector(:focus-visible) {
+  *:focus {
+    /* Fallback for browsers without :focus-visible support */
+    outline: 3px solid deepskyblue;
+    outline-offset: 3px;
+  }
+}
+
+/*============================== Utility classes ==============================*/
+.text-primary-200 {
+  color: var(--clr-primary-200);
+}
+
+.text-primary-700 {
+  color: var(--clr-primary-700);
+}
+
+.text-primary-800 {
+  color: var(--clr-primary-800);
+}
+
+.text-primary-900 {
+  color: var(--clr-primary-900);
+}
+
+.text-secondary-100 {
+  color: var(--clr-secondary-100);
+}
+
+.text-secondary-200 {
+  color: var(--clr-secondary-200);
+}
+
+.text-secondary-300 {
+  color: var(--clr-secondary-300);
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.bg-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+
+.bg-primary-700 {
+  background-color: var(--clr-primary-700);
+}
+
+.bg-primary-800 {
+  background-color: var(--clr-primary-800);
+}
+
+.bg-primary-900 {
+  background-color: var(--clr-primary-900);
+}
+
+.bg-secondary-100 {
+  background-color: var(--clr-secondary-100);
+}
+
+.bg-secondary-200 {
+  background-color: var(--clr-secondary-200);
+}
+
+.bg-secondary-300 {
+  background-color: var(--clr-secondary-300);
+}
+
+.bg-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+
+.fs-body {
+  font-size: var(--fs-body);
+}
+
+.fs--primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+
+.fs--nav {
+  font-size: var(--fs-nav);
+}
+
+
+.fs-medium {
+  font-size: var(--fs-700);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+/* general styling */
+
+::-webkit-input-placeholder {
+  color: var(--clr-secondary-200);
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: var(--clr-secondary-200);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--clr-secondary-200);
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: var(--clr-secondary-200);
+  opacity: 1;
+}
+
+::placeholder {
+  color: var(--clr-secondary-200);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--clr-secondary-200);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: var(--clr-secondary-200);
+}
+
+
+.skip-nav-links {
+  /*position absolut and transform style are inline to prevent flickering behavior on load*/
+  padding: 1em;
+  -webkit-transition: -webkit-transform 325ms ease-in;
+  transition: -webkit-transform 325ms ease-in;
+  -o-transition: transform 325ms ease-in;
+  transition: transform 325ms ease-in;
+  transition: transform 325ms ease-in, -webkit-transform 325ms ease-in;
+}
+
+.skip-nav-links:focus {
+  position: absolute;
+  -webkit-transform: translateY(100%) !important;
+  -ms-transform: translateY(100%) !important;
+  transform: translateY(100%) !important;
+}
+
+html {
+  --header-height: 60px;
+  scroll-padding-top: calc(var(--header-height) + 1em);
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--clr-primary-900);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  height: var(--header-height);
+  z-index: 10;
+}
+
+.container {
+  --max-width: 1110px;
+  --container-padding: 2rem;
+  width: min(var(--max-width), 100% - var(--container-padding));
+  height: 100%;
+  margin-inline: auto;
+  position: relative;
+}
+
+
+button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.logo {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+
+}
+
+button[aria-label="open menu button"] {
+  background-color: transparent;
+  position: absolute;
+  width: fit-content;
+}
+
+svg {
+  fill: var(--clr-secondary-100);
+  stroke: var(--clr-secondary-100);
+}
+
+ul {
+  padding-inline: 0;
+}
+
+nav {
+  margin-inline: auto;
+  height: 100%;
+}
+
+nav li {
+  padding-inline: 1em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="search"] {
+  --input-height: 35px;
+  border: 1px solid var(--clr-secondary-300);
+  height: var(--input-height);
+  border-radius: 2px;
+  padding: .2rem;
+  padding-left: .4rem;
+}
+
+form>button[type="submit"] {
+  height: var(--input-height) !important;
+  /*    (input-height - icon-heigh)/2*/
+  padding: calc((35px - 20px) / 2);
+}
+
+.open-menu-btn,
+.close-menu-btn,
+.open-search-btn {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+
+.open-search-btn>svg {
+  fill: var(--clr-neutral-100);
+  stroke: var(--clr-neutral-100);
+}
+
+.close-menu-btn>svg {
+  fill: var(--clr-secondary-100);
+  stroke: var(--clr-secondary-100);
+}
+
+@media screen and (max-width:750px) {
+  .logo {
+    margin-inline: auto;
+  }
+
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .search-form {
+    display: none;
+    position: absolute;
+    right: 0;
+    -webkit-transform: translate(10px, 150%);
+    -ms-transform: translate(10px, 150%);
+    transform: translate(10px, 150%);
+    border: 6px solid var(--clr-primary-900);
+  }
+
+  form::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: -25px;
+    -webkit-transform: translateX(-30%);
+    -ms-transform: translateX(-30%);
+    transform: translateX(-30%);
+    border-bottom: 10px solid var(--clr-primary-900);
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  .open-search-btn {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: var(--header-height);
+    width: calc(100% + var(--container-padding));
+    min-height: 100vh;
+    background-color: var(--clr-primary-900);
+    right: 0;
+    -webkit-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+
+  ul[role="list"] {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    margin-top: var(--container-padding);
+    gap: var(--container-padding);
+  }
+
+  .open-menu-btn {
+    display: block;
+    left: 0;
+  }
+
+}
+
+main {
+  height: 200vh;
+  width: 100%;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-inline: auto;
+  width: fit-content;
+  transform: translateY(100%);
+}
+
+span {
+  margin-bottom: 2rem;
+}
+
+span:nth-child(1) {
+  word-spacing: 4.9rem;
+}
+
+span:last-child {
+  padding: .1rem;
+}
+
+span:nth-child(3) {
+  padding: .2rem;
+  word-spacing: 3.9rem;
+}
