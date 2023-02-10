@@ -5,5 +5,3 @@ some features :
 - aria-label for nav bar and search form are responsive.
 - [live preview](https://hassaneljebyly.github.io/projects/UI_Components/responsive-navbar-001/)
 - ![design](https://drive.google.com/uc?id=1plmA8l3a1vLHIGRRClt_67mZ4SKa9AMQ)
-- ![design](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
-- ![image](https://drive.google.com/uc?export=view&id=1plmA8l3a1vLHIGRRClt_67mZ4SKa9AMQ)
