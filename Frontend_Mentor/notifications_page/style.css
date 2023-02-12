@@ -288,6 +288,11 @@ button[aria-label="mark all as read"]:hover {
   padding: 1em;
   border-radius: 5px;
   cursor: pointer;
+  /* added this later to prevent layout shake when notification is hovered 
+  big thanks to Ion Stici (https: //www.frontendmentor.io/profile/ionStici) for pointing it out
+  */
+  border: 1px solid transparent;
+  transition: border 0.1s;
 }
 
 .notification-list {
