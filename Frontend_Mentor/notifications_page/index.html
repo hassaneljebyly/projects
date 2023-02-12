@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://drive.google.com/uc?id=1LElhpZwyJ2cdosf71wPG4tJXID8GfNg5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Notification Page</title>
+  </head>
+  <body>
+    <div class="container bg-neutral-200">
+      <div class="notification-wrapper bg-neutral-100">
+        <header class="notification-header">
+          <h2 class="text-neutral-700 fs-heading fw-extra-bold">Notifications <span id="unred-notification-number" class="unread-notification-number fs-small bg-primary-blue text-neutral-100"></span></h2>
+          <button id="mark-all-as-read" aria-label="mark all as read" class="fs-body fw-medium text-neutral-600">Mark all as read</button>
+        </header>
+        <ul role="list" class="notification-list">
+          <li tabindex="0" role="listitem" aria-label="unread notification" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1UMsF_vtQ-aeM2CZoTOdWo8K3LziERph2" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Mark Webber</a>
+                <span class="text-neutral-600">reacted to your recent post</span>
+                <a class="fw-extra-bold text-neutral-600" href="#">My first tournament today!</a>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">1m ago</span>
+              </p>
+            </div>
+          </li>
+          <li tabindex="0" role="listitem" aria-label="unread notification" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1t-OM8EAal1xJlwg7hUvjjW69FArRay0j" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Angela Gray</a>
+                <span class="text-neutral-600">followed you</span>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">5m ago</span>
+              </p>
+            </div>
+          </li>
+          <li tabindex="0" role="listitem" aria-label="unread notification" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1bnbpmBnvkEarADm3cgF1DsqMGQts3zoh" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Jacob Thompson</a>
+                <span class="text-neutral-600">has joined your group</span>
+                <a class="fw-extra-bold text-primary-blue" href="#">Chess Club</a>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">1d ago</span>
+              </p>
+            </div>
+          </li>
+          <li tabindex="0" role="listitem" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1gxrc7xB-p-DAw5Uj3qE5kCuSP8UpfTMd" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Rizky Hasanuddin</a>
+                <span class="text-neutral-600">sent you a private message</span>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">5days ago</span>
+              </p>
+              <p class="message-box text-neutral-600 fs-body">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+            </div>
+          </li>
+          <li tabindex="0" role="listitem" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1VMxoejv9tQ3eEoktmSiqaiRvOKgxfVjQ" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Kimberly Smith</a>
+                <span class="text-neutral-600">commented on your picture</span>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">1week ago</span>
+              </p>
+            </div>
+            <div class="post-picture">
+              <img src="https://drive.google.com/uc?id=10Z-YgjTLFuzwNVLioI5lKVVAujbCwAV2" loading="lazy" width="55" alt="" />
+            </div>
+          </li>
+          <li tabindex="0" role="listitem" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1bJoAGsTSI2gwYONJrAQMtD81lIYVdh1Z" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Nathan Peterson</a>
+                <span class="text-neutral-600">reacted to your recent post</span>
+                <a class="fw-extra-bold text-neutral-600" href="#">5 end-game strategies to increase your win rate</a>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">2 weeks ago</span>
+              </p>
+            </div>
+          </li>
+          <li tabindex="0" role="listitem" class="notification">
+            <div class="avatar">
+              <img src="https://drive.google.com/uc?id=1opzMUTaBzhQUsdN1F43I21GVbRy-wyK9" loading="lazy" width="55" alt="" />
+            </div>
+            <div class="notification-primary-content">
+              <p class="fs-body">
+                <a class="text-neutral-700 fw-extra-bold" href="#">Anna Kim</a>
+                <span class="text-neutral-600">left the group</span>
+                <a class="fw-extra-bold text-primary-blue" href="#">Chess Club</a>
+                <span class="unread-notification"></span>
+                <span class="notification-time-stamp text-neutral-500 fw-medium">2 weeks ago</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
