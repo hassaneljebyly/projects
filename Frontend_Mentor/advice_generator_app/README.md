@@ -13,6 +13,6 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 ## Links
 
-[Solution URL](https://www.frontendmentor.io/solutions/advice-generator-app-using-fetch-api-mYZufsZWgS)
+[Solution URL](https://www.frontendmentor.io/solutions/advice-generator-app-using-fetch-api-6K4fxSPYru)
 
 [Live Site URL](https://hassaneljebyly.github.io/projects/Frontend_Mentor/advice_generator_app)

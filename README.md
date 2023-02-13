@@ -18,7 +18,7 @@
 
   for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/Frontend_Mentor/notifications_page)**
 
-- **1. notifications-page**
+- **2. advice_generator_app**
 
   [live preview](https://hassaneljebyly.github.io/projects/Frontend_Mentor/advice_generator_app/)
 
