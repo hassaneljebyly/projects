@@ -2,6 +2,7 @@ const generateAdviceButton = document.getElementById('generate-advice-btn');
 let adviceInnerHTML = document.getElementById('the-advice');
 let adviceNumber = document.getElementById('advice-number');
 let randomAdviceURL = 'https://api.adviceslip.com/advice';
+let patternDividerIcon = document.getElementById('pattern-divider-icon');
 
 generateAdviceButton.addEventListener('click', displayNewAdvice);
 
@@ -26,3 +27,11 @@ function displayNewAdvice() {
     adviceInnerHTML.innerText = advice;
   });
 }
+
+setPatternDividerIcon();
+function setPatternDividerIcon() {
+  window.innerWidth > 375 ? patternDividerIcon.setAttribute('xlink:href', './icons.svg#pattern-divider-desktop') : patternDividerIcon.setAttribute('xlink:href', './icons.svg#pattern-divider-mobile');
+}
+window.addEventListener('resize', () => {
+  setPatternDividerIcon();
+});
