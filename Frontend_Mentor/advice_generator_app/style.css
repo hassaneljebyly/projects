@@ -269,3 +269,17 @@ button[aria-label="generate advice button"]:hover {
   -webkit-box-shadow: var(--clr-primary-100) 0 0 30px;
   box-shadow: var(--clr-primary-100) 0 0 30px
 }
+
+.mobile-svg {
+  display: none;
+}
+
+@media (max-width: 375px) {
+  .mobile-svg {
+    display: block;
+  }
+
+  .desktop-svg {
+    display: none;
+  }
+}
