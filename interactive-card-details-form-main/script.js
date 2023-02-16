@@ -24,7 +24,7 @@ continueBtn.addEventListener('click', () => {
 });
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
-  let confirmed = false;
+  let confirmed = true;
   allInputField.forEach((input) => {
     if (input.value === '') {
       let inputId = input.getAttribute('id');
@@ -45,6 +45,7 @@ submitButton.addEventListener('click', (e) => {
     setTimeout(() => {
       confirmationContainer.classList.add('confirmationAnimate');
       confirmationContainer.setAttribute('aria-hidden', 'false');
+      confirmationContainer.style = 'pointer-events: initial;';
     }, 500);
   }
 });
