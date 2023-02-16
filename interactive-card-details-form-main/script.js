@@ -91,9 +91,15 @@ expYear.addEventListener('keyup', () => {
 
 cvcNumber.addEventListener('keyup', () => {
   cvcNumber.value.length > 3 ? (cvcNumber.value = cvcNumber.value.slice(-3)) : '';
-  cvcNumber.value === '000' ? throwWarning(cvcNumberHint, 'Invalid input', cvcNumber) : removeWarning(cvcNumberHint, cvcNumber);
-  disableFollowingInput(false);
-  disableSubmitButton(false);
+  if (cvcNumber.value === '000') {
+    throwWarning(cvcNumberHint, 'Invalid input', cvcNumber);
+    disableFollowingInput(true);
+    disableSubmitButton(true);
+  } else {
+    removeWarning(cvcNumberHint, cvcNumber);
+    disableFollowingInput(false);
+    disableSubmitButton(false);
+  }
   displayInputOnCard('card-front_cvc-number', '000', cvcNumber.value);
 });
 
