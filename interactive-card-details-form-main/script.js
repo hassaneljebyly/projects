@@ -24,7 +24,7 @@ continueBtn.addEventListener('click', () => {
 });
 submitButton.addEventListener('click', (e) => {
   e.preventDefault();
-  let confirmed = true;
+  let confirmed = false;
   allInputField.forEach((input) => {
     if (input.value === '') {
       let inputId = input.getAttribute('id');
