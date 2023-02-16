@@ -243,6 +243,8 @@ input {
   border-radius: var(--border-radius);
   border: 2px solid var(--clr-neutral-200);
   padding: .4em;
+  -webkit-transition: border ease 200ms;
+  -o-transition: border ease 200ms;
   transition: border ease 200ms;
 }
 
@@ -254,8 +256,33 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
+  -webkit-appearance: none;
   appearance: none;
   -moz-appearance: textfield;
+}
+
+
+input::-webkit-input-placeholder {
+  color: var(--clr-neutral-300);
+  text-transform: none;
+}
+
+
+input::-moz-placeholder {
+  color: var(--clr-neutral-300);
+  text-transform: none;
+}
+
+
+input:-ms-input-placeholder {
+  color: var(--clr-neutral-300);
+  text-transform: none;
+}
+
+
+input::-ms-input-placeholder {
+  color: var(--clr-neutral-300);
+  text-transform: none;
 }
 
 
@@ -270,6 +297,8 @@ button {
   padding: .5em;
   width: 100%;
   border-radius: var(--border-radius);
+  -webkit-transition: background-color ease 200ms;
+  -o-transition: background-color ease 200ms;
   transition: background-color ease 200ms;
 }
 
@@ -291,6 +320,12 @@ input[disabled]:hover {
 input:focus {
   outline: 0;
   background:
+    -webkit-gradient(linear, left top, right top, from(var(--clr-neutral-100)), to(var(--clr-neutral-100))) padding-box,
+    -webkit-gradient(linear, left top, right top, from(var(--clr-primary-800)), to(var(--clr-primary-900))) border-box;
+  background:
+    -o-linear-gradient(left, var(--clr-neutral-100), var(--clr-neutral-100)) padding-box,
+    -o-linear-gradient(left, var(--clr-primary-800), var(--clr-primary-900)) border-box;
+  background:
     linear-gradient(90deg, var(--clr-neutral-100), var(--clr-neutral-100)) padding-box,
     linear-gradient(90deg, var(--clr-primary-800), var(--clr-primary-900)) border-box;
   border-color: transparent;
@@ -303,34 +338,60 @@ button:hover {
 }
 
 button:focus {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
   transform: scale(1.01);
   outline: 2px solid;
   outline-color: var(--clr-primary-800);
   outline-offset: 3px;
+  -webkit-transition: -webkit-transform ease-in-out 250ms;
+  transition: -webkit-transform ease-in-out 250ms;
+  -o-transition: transform ease-in-out 250ms;
   transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms, -webkit-transform ease-in-out 250ms;
 }
 
 /* layout */
 
 .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
 }
 
 .card-display {
   width: 33vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 2em;
 }
 
 .card-action-section {
   width: 67vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
 }
@@ -338,14 +399,27 @@ button:focus {
 .card-back,
 .card-front {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-negative: 0;
   flex-shrink: 0;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: clamp(250px, 33vw, 470px);
   padding: 1em;
   aspect-ratio: 2/1.1;
+  -webkit-box-shadow:
+    0px 0px 255px 49px rgba(0, 0, 0, 0.23),
+    0px 45px 26px 0px rgba(0, 0, 0, 0.14);
   box-shadow:
     0px 0px 255px 49px rgba(0, 0, 0, 0.23),
     0px 45px 26px 0px rgba(0, 0, 0, 0.14);
@@ -355,6 +429,8 @@ button:focus {
   background-image: url("https://drive.google.com/uc?id=1FGEtOa-gb1IyEiBn8IHTMd8QKjcYOcGs");
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
   transform: translateX(50%);
   border-radius: var(--border-radius);
 }
@@ -370,22 +446,35 @@ button:focus {
   position: absolute;
   top: 1em;
   left: calc(20%/2);
+  -webkit-transform: translateX(15%);
+  -ms-transform: translateX(15%);
   transform: translateX(15%);
 }
 
 .card-front_exp-date-holder-name {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .card-back_cvc-number {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  -ms-flex-item-align: end;
   align-self: flex-end;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
 object {
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
   width: fit-content !important;
 }
 
@@ -393,6 +482,8 @@ object {
   background-image: url("https://drive.google.com/uc?id=1IXDkZGrBX-UVON6jP4IC9AqYPmZ--Y6f");
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-transform: translateX(75%);
+  -ms-transform: translateX(75%);
   transform: translateX(75%);
   border-radius: var(--border-radius);
 }
@@ -402,6 +493,8 @@ object {
   width: 100%;
   max-width: 400px;
   position: absolute;
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
   transform: translateX(50%);
 }
 
@@ -421,6 +514,8 @@ fieldset {
 }
 
 .expDate-cardCVC {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -428,13 +523,20 @@ fieldset {
 
 .expiration-date,
 .cvc-number-fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 50%;
 }
 
 .expiration-date {
+  -webkit-column-gap: 1em;
+  -moz-column-gap: 1em;
   column-gap: 1em;
 }
 
@@ -443,6 +545,9 @@ fieldset {
 }
 
 .cvc-number-fieldset {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -505,6 +610,8 @@ label[for="card-number"]::after {
   background-repeat: no-repeat;
   position: absolute;
   bottom: 3px;
+  -webkit-transform: translateX(500%);
+  -ms-transform: translateX(500%);
   transform: translateX(500%);
 }
 
@@ -520,6 +627,8 @@ label[data-card-company="masterCard"]::after {
   background-image: url("https://www.mastercard.us/content/dam/public/mastercardcom/na/us/en/homepage/Home/mc-logo-52.svg");
   height: 40px;
   background-size: 35px;
+  -webkit-transform: translateX(515%);
+  -ms-transform: translateX(515%);
   transform: translateX(515%);
 }
 
@@ -538,20 +647,29 @@ label[data-card-company="americanExpress"]::after {
 
   .form-container,
   .confirmation-container {
+    -webkit-transform: translateX(20%);
+    -ms-transform: translateX(20%);
     transform: translateX(20%);
   }
 
   .card-front {
+    -webkit-transform: translateX(25%);
+    -ms-transform: translateX(25%);
     transform: translateX(25%);
   }
 
   .card-back {
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
 }
 
 @media screen and (max-width:1020px) {
   .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 
@@ -568,16 +686,26 @@ label[data-card-company="americanExpress"]::after {
 
   .form-container,
   .confirmation-container {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
     transform: translateX(0%);
   }
 
   .card-back {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
+    -webkit-transform: translate(15%, 55%);
+    -ms-transform: translate(15%, 55%);
     transform: translate(15%, 55%);
   }
 
   .card-front {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
+    -webkit-transform: translate(-15%, -30%);
+    -ms-transform: translate(-15%, -30%);
     transform: translate(-15%, -30%);
     padding: .5em;
     z-index: 1;
@@ -598,6 +726,8 @@ label[data-card-company="americanExpress"]::after {
     position: absolute;
     top: .5em;
     left: calc(20%/2);
+    -webkit-transform: translateX(5%);
+    -ms-transform: translateX(5%);
     transform: translateX(5%);
   }
 }
@@ -607,14 +737,20 @@ label[data-card-company="americanExpress"]::after {
   .form-container,
   .confirmation-container {
     padding-inline: 1em;
+    -webkit-transform: translateY(-10%);
+    -ms-transform: translateY(-10%);
     transform: translateY(-10%);
   }
 
   .card-back {
+    -webkit-transform: translate(10%, 50%);
+    -ms-transform: translate(10%, 50%);
     transform: translate(10%, 50%);
   }
 
   .card-front {
+    -webkit-transform: translate(-10%, -15%);
+    -ms-transform: translate(-10%, -15%);
     transform: translate(-10%, -15%);
   }
 }
@@ -628,13 +764,22 @@ label[data-card-company="americanExpress"]::after {
 }
 
 .submitAnimate {
+  -webkit-animation: submitAnimation 1s ease forwards;
   animation: submitAnimation 1s ease forwards;
   /* position: absolute; */
   /* transform: translateY(-100%); */
 }
 
 .confirmationAnimate {
+  -webkit-animation: confirmationAnimation 1s ease forwards;
   animation: confirmationAnimation 1s ease forwards;
+}
+
+
+@-webkit-keyframes confirmationAnimation {
+  100% {
+    opacity: 1;
+  }
 }
 
 
@@ -644,8 +789,17 @@ label[data-card-company="americanExpress"]::after {
   }
 }
 
+@-webkit-keyframes submitAnimation {
+  100% {
+    -webkit-transform: scale(0.001);
+    transform: scale(0.001);
+    opacity: 0;
+  }
+}
+
 @keyframes submitAnimation {
   100% {
+    -webkit-transform: scale(0.001);
     transform: scale(0.001);
     opacity: 0;
   }

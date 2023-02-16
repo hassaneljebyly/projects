@@ -8,6 +8,6 @@ This is a solution to the [Interactive card details form challenge on Frontend M
 
 ## Links
 
-[Solution URL]()
+[Solution URL](https://www.frontendmentor.io/solutions/responsive-card-details-form-using-flexbox-and-regex-fqNS7SpCsg)
 
 [Live Site URL](https://hassaneljebyly.github.io/projects/interactive-card-details-form-main)
