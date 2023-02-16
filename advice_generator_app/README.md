@@ -15,4 +15,4 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 
 [Solution URL](https://www.frontendmentor.io/solutions/advice-generator-app-using-fetch-api-6K4fxSPYru)
 
-[Live Site URL](https://hassaneljebyly.github.io/projects/Frontend_Mentor/advice_generator_app)
+[Live Site URL](https://hassaneljebyly.github.io/projects/advice_generator_app)

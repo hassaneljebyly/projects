@@ -6,20 +6,20 @@
 
 - **1. responsive-navbar-001.**
 
-  [live preview](https://hassaneljebyly.github.io/projects/UI_Components/responsive-navbar-001/)
+  [live preview](https://hassaneljebyly.github.io/projects/responsive-navbar-001/)
 
-  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/UI_Components/responsive-navbar-001)**
+  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/responsive-navbar-001)**
 
 ## Frontend_Mentor
 
 - **1. notifications-page**
 
-  [live preview](https://hassaneljebyly.github.io/projects/Frontend_Mentor/notifications_page/)
+  [live preview](https://hassaneljebyly.github.io/projects/notifications_page/)
 
-  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/Frontend_Mentor/notifications_page)**
+  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/notifications_page)**
 
 - **2. advice_generator_app**
 
-  [live preview](https://hassaneljebyly.github.io/projects/Frontend_Mentor/advice_generator_app/)
+  [live preview](https://hassaneljebyly.github.io/projects/advice_generator_app/)
 
-  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/Frontend_Mentor/advice_generator_app)**
+  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/advice_generator_app)**
