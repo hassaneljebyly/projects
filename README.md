@@ -23,3 +23,9 @@
   [live preview](https://hassaneljebyly.github.io/projects/advice_generator_app/)
 
   for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/advice_generator_app)**
+
+- **3. interactive-card-details-form-main**
+
+  [live preview](https://hassaneljebyly.github.io/projects/interactive-card-details-form-main/)
+
+  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/interactive-card-details-form-main)**
