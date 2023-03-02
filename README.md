@@ -29,3 +29,9 @@
   [live preview](https://hassaneljebyly.github.io/projects/interactive-card-details-form-main/)
 
   for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/interactive-card-details-form-main)**
+
+- **4. easybank-landing-page-master**
+
+  [live preview](https://hassaneljebyly.github.io/projects/easybank-landing-page-master/)
+
+  for more info about the project : **[view code](https://github.com/hassaneljebyly/projects/tree/master/easybank-landing-page-master)**

@@ -27,18 +27,18 @@
   --fs-900: 3.052rem;
   --ff-primary: var(--font-family-primary);
   /*! base font size 16px */
-  --fs-primary-heading: clamp(2.125rem, 1.7512rem+1.8687vw, 3.433125rem);
-  --fs-secondary-heading: clamp(1.75rem, 1.5714rem+0.8929vw, 2.375rem);
-  --fs-tertiary-heading: clamp(1.25rem, 1.1786rem+0.3571vw, 1.5rem);
-  --fs-card-article-heading: clamp(1rem, 1rem+0vw, 1rem);
-  --fs-byline-heading: clamp(0.5925rem, .5446rem+0.0893vw, .625rem);
-  --fs-navigation: clamp(1rem, 1rem+0vw, 1rem);
-  --fs-primary-paragraph: clamp(0.899rem, .7232rem+0.4464vw, 1.125rem);
-  --fs-secondary-paragraph: clamp(0.899rem, .7232rem+0.4464vw, 1.125rem);
-  --fs-card-paragraph: clamp(0.875rem, .8393rem+0.1786vw, 1rem);
-  --fs-card-article-paragraph: clamp(0.8125rem, .7946rem+0.0893vw, .875rem);
-  --fs-license: clamp(0.75rem, .6964rem+0.2679vw, .9375rem);
-  --fs-cta-button: clamp(0.8125rem, .7768rem+0.1786vw, .9375rem);
+  --fs-primary-heading: clamp(2.125rem, 1.7512rem + 1.8687vw, 3.433125rem);
+  --fs-secondary-heading: clamp(1.75rem, 1.5714rem + 0.8929vw, 2.375rem);
+  --fs-tertiary-heading: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
+  --fs-card-article-heading: clamp(1rem, 1rem + 0vw, 1rem);
+  --fs-byline-heading: clamp(0.5925rem, .5446rem + 0.0893vw, .625rem);
+  --fs-navigation: clamp(1rem, 1rem + 0vw, 1rem);
+  --fs-primary-paragraph: clamp(0.899rem, .7232rem + 0.4464vw, 1.125rem);
+  --fs-secondary-paragraph: clamp(0.899rem, .7232rem + 0.4464vw, 1.125rem);
+  --fs-card-paragraph: clamp(0.875rem, .8393rem + 0.1786vw, 1rem);
+  --fs-card-article-paragraph: clamp(0.8125rem, .7946rem + 0.0893vw, .875rem);
+  --fs-license: clamp(0.75rem, .6964rem + 0.2679vw, .9375rem);
+  --fs-cta-button: clamp(0.8125rem, .7768rem + 0.1786vw, .9375rem);
   --header-height: 64px;
   --container-padding: 2rem;
   --cards-max-width: 320px
@@ -762,9 +762,9 @@ main {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-    -webkit-transform: translate(30%, 30%) scale(1.5);
-    -ms-transform: translate(30%, 30%) scale(1.5);
-    transform: translate(30%, 30%) scale(1.5)
+    -webkit-transform: translate(50%, 10%) scale(1.5);
+    -ms-transform: translate(50%, 10%) scale(1.5);
+    transform: translate(50%, 10%) scale(1.5)
   }
 
   .hero__cta {

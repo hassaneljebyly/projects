@@ -8,6 +8,6 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 
 ## Links
 
-[Solution URL]()
+[Solution URL](https://www.frontendmentor.io/solutions/responsive-easybank-landing-page-flex-box-grid-bem-7WUhodrfUr)
 
 [Live Site URL](https://hassaneljebyly.github.io/projects/easybank-landing-page-master)
