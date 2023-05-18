@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as var;
+
+.author {
+  display: flex;
+  align-items: start;
+  gap: 1em;
+  padding-block: 1rem;
+  padding-inline: var(--cardPadding);
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__avatar {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__name {
+    margin: 0;
+    margin-bottom: 0.2em;
+  }
+}

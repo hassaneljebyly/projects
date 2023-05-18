@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as var;
+/* ============================= utility classes ============================= */
+/* Colors */
+@each $color, $value in var.$colors {
+  .bg-#{$color} {
+    background-color: var(--clr-#{$color});
+  }
+  .text-#{$color} {
+    color: var(--clr-#{$color});
+  }
+}
+/* fonts */
+.ff-primary {
+  font-family: #{var.$font-family};
+}
+@each $fs, $value in var.$font-size {
+  .#{$fs} {
+    font-size: var(--#{$fs});
+    line-height: calc(var(--#{$fs}) * 1.5);
+  }
+}
+@each $fw, $value in var.$font-weights {
+  .#{$fw} {
+    font-weight: var(--#{$fw});
+  }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.hide-text {
+  overflow: hidden;
+  padding: 0; /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+.container {
+  --max-width: #{var.$containerMaxWidth};
+  --container-padding: #{var.$containerPadding};
+  width: min(var(--max-width), 100% - var(--container-padding));
+  min-height: inherit;
+  margin-inline: auto;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+}

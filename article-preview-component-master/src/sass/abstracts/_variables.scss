@@ -1,0 +1,49 @@
+// Colors
+$colors: (
+  'primary-100': hsl(0, 0%, 100%),
+  'primary-400': hsl(217, 19%, 35%),
+  'secondary-100': hsl(210, 46%, 95%),
+  'neutral-300': hsl(214, 17%, 51%),
+  'neutral-200': hsl(212, 23%, 69%),
+);
+
+// Typography
+$font-weights: (
+  'fw-500': 500,
+  'fw-700': 700,
+);
+// base font size : 16px
+$font-size: (
+  'fs-900': clamp(1.801875rem, 1.258125rem + 2.71875vw, 3.433125rem),
+  // 28.83px
+  'fs-800': clamp(1.601875rem, 1.2202083333333331rem + 1.9083333333333337vw, 2.746875rem),
+  // 25.63px
+  'fs-700': clamp(1.42375rem, 1.1658333333333335rem + 1.2895833333333329vw, 2.1975rem),
+  // 22.78px
+  'fs-600': clamp(1.265625rem, 1.1014583333333334rem + 0.8208333333333333vw, 1.758125rem),
+  // 20.25px
+  'fs-500': clamp(1.125rem, 1.03125rem + 0.46875vw, 1.40625rem),
+  // 18.00px
+  'fs-400': clamp(1rem, 0.9583333333333334rem + 0.20833333333333334vw, 1.125rem),
+  // 16.00px
+  'fs-300': clamp(0.88875rem, 0.885rem + 0.01874999999999997vw, 0.9rem),
+  // 14.22px
+  'fs-200': clamp(0.79rem, 0.8133333333333334rem + -0.11666666666666677vw, 0.72rem),
+  // 12.64px
+  'fs-100': clamp(0.7025rem, 0.7445833333333334rem + -0.2104166666666666vw, 0.57625rem),
+  // 11.24px
+);
+
+$font-family: 'Manrope', sans serif;
+
+// Break Points
+$breakPointsMedium: 650px;
+
+// spacing
+$containerMaxWidth: 1440px;
+$containerPadding: 2rem;
+
+$cardPaddingLarge: 2.75rem;
+$cardPaddingSmall: 1.5rem;
+$cardMaxWidth: 375px;
+$cardMaxHeight: 780px;

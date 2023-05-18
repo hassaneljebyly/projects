@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32"
+      href="https://drive.google.com/uc?id=1LElhpZwyJ2cdosf71wPG4tJXID8GfNg5" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.min.css">
+    <script>
+      document.getElementsByTagName("html")[0].classList.replace("no-js", "js")
+    </script>
+    <title>Frontend Mentor | Article preview component</title>
+  </head>
+  <!-- 
+    todo : image to google drive
+    todo : challenges
+    todo : share component
+    todo : tools styling in readme file example : sass:v1.141
+    todo : Open Graph Metadata https://github.com/h5bp/html5-boilerplate/blob/main/docs/html.md#open-graph-metadata
+   -->
+
+  <body class="ff-primary | bg-secondary-100">
+    <div class="container">
+      <article class="card | bg-primary-100">
+        <div class="card__image">
+          <img src="../public/assets/drawers.jpg" alt="image of a drawer">
+        </div>
+        <blockquote class="card__body | fs-600">
+          <div class="card__body-text">
+            <h1 class="card__title | text-primary-400 fw-700 fs-500">
+              Shift the overall look and feel by adding these wonderful
+              touches to furniture in your home
+            </h1>
+            <p class="card__preview-text | text-neutral-300 fw-500 fs-300">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips
+              to help you make any room feel complete.
+            </p>
+          </div>
+          <div class="author | bg-primary-100">
+            <div class="author__avatar">
+              <img width="40" height="40" src="../public/assets/avatar-michelle.jpg" alt="author photo">
+            </div>
+            <div class="author__info">
+              <h2 class="author__name | text-primary-400 fw-700 fs-200"><a tabindex="1" href="#0">Michelle Appleton</a>
+              </h2>
+              <span class="author__publish-date | text-neutral-200 fw-500 fs-200">28 Jun 2020</span>
+            </div>
+          </div>
+          <div class="share-container_1" id="share-container_1">
+            <div class="share-container_2" id="share-container_2">
+              <div class="share" id="share-component" aria-hidden="false">
+                <p class="share__label | text-neutral-200 fw-500 fs-400">SHARE</p>
+                <a tabindex="3" class="share__link icon" href="https://www.facebook.com" target="_blank">
+                  <span class="visually-hidden">facebook</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                    <path
+                      d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" />
+                  </svg>
+                </a>
+                <a tabindex="4" class="share__link icon" href="https://www.twitter.com" target="_blank">
+                  <span class="visually-hidden">twitter</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17">
+                    <path
+                      d="M20 2.172a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.605.996A4.096 4.096 0 0013.847.248c-2.65 0-4.596 2.472-3.998 5.037A11.648 11.648 0 011.392 1a4.109 4.109 0 001.27 5.478 4.086 4.086 0 01-1.858-.513c-.045 1.9 1.318 3.679 3.291 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.833 2.849A8.25 8.25 0 010 14.658a11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.663-12.205A8.354 8.354 0 0020 2.172z" />
+                  </svg>
+                </a>
+                <a tabindex="5" class="share__link icon" href="https://www.pinterest.com" target="_blank">
+                  <span class="visually-hidden">pinterest</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                    <path
+                      d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z" />
+                  </svg>
+                </a>
+              </div>
+              <div tabindex="2" role="button" class="share__button icon" id="share-button"
+                aria-controls="share-component">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12.5" viewBox="0 0 15 12.5">
+                  <path
+                    d="M17.5,9.688,11.25,3.75V7.083c-5.833.834-7.917,5-8.75,9.167C4.583,13.333,7.083,12,11.25,12v3.417Z"
+                    transform="translate(-2.5 -3.75)" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </blockquote>
+      </article>
+    </div>
+    <script src="../src/script.js"></script>
+  </body>
+
+</html>

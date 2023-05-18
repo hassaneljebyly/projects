@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as var;
+
+.card {
+  max-width: var.$cardMaxWidth;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  overflow: visible;
+  border-radius: 10px;
+  &__image {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+  }
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 250ms ease-in-out;
+  }
+  &__body {
+    margin-inline: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin: 1rem 0 0 0;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  &__body-text {
+    padding-inline: var(--cardPadding);
+  }
+  &__title {
+    margin-top: 0;
+  }
+  &:hover &__image img {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: var.$breakPointsMedium) {
+  .card {
+    display: flex;
+    max-height: var.$cardMaxHeight;
+    max-width: 730px;
+    &__body {
+      border: 10px;
+    }
+    &__image {
+      border-radius: 0;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+}

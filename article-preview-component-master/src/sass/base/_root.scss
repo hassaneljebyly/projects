@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as var;
+
+:root {
+  /* Colors */
+  @each $color, $value in var.$colors {
+    --clr-#{$color}: #{$value};
+  }
+  /* Typography */
+  @each $fs, $value in var.$font-size {
+    --#{$fs}: #{$value};
+  }
+  @each $fw, $value in var.$font-weights {
+    --#{$fw}: #{$value};
+  }
+  /* font family */
+  --font-family-primary: '#{var.$font-family}', sans-serif;
+  /* spacing */
+  --cardPadding: #{var.$cardPaddingSmall};
+}
+
+@media (min-width: var.$breakPointsMedium) {
+  :root {
+    --cardPadding: #{var.$cardPaddingLarge};
+  }
+}

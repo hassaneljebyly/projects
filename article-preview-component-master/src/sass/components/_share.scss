@@ -1,0 +1,147 @@
+@use '../abstracts/variables' as var;
+
+$transitionDuration: 500;
+
+.js {
+  .share-container_1 {
+    background-color: transparent;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+}
+
+.no-js {
+  .share-container_1 {
+    background-color: var(--clr-primary-400);
+  }
+  .share__button {
+    display: none;
+  }
+}
+
+.share-container_2 {
+  position: relative;
+  background-color: transparent;
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--clr-primary-400);
+    height: 50px;
+    aspect-ratio: 1;
+    top: 50%;
+    right: var(--cardPadding);
+    transform: translateY(-55%) translateX(19%) scale(0);
+    transform-origin: center center;
+    border-radius: 50%;
+    transition: transform #{$transitionDuration}ms ease-in-out;
+    pointer-events: none;
+  }
+}
+
+.share {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  padding-block: 0;
+  padding-inline: var(--cardPadding);
+  pointer-events: none;
+  overflow: hidden;
+  &__link {
+    pointer-events: all;
+  }
+  &__button {
+    position: absolute;
+    right: var(--cardPadding);
+    top: 0;
+    transform: translateY(50%);
+    padding: 0.3em;
+    cursor: pointer;
+    pointer-events: all;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  &__label {
+    transform: translateX(2000%);
+    transition: transform #{$transitionDuration - 100}ms ease-in-out;
+    transition-delay: 0;
+  }
+  .icon {
+    transform: translateX(2000%);
+
+    transition: transform #{$transitionDuration - 100}ms ease-in-out;
+  }
+  [href="https://www.facebook.com"]
+  {
+    transition: transform #{$transitionDuration - 100}ms ease-in-out;
+    transition-delay: 100ms;
+  }
+  [href="https://www.twitter.com"]
+  {
+    transition: transform #{$transitionDuration - 100}ms ease-in-out;
+    transition-delay: 200ms;
+  }
+  [href="https://www.pinterest.com"]
+  {
+    transition: transform #{$transitionDuration - 100}ms ease-in-out;
+    transition-delay: 300ms;
+  }
+}
+
+.open {
+  .share__label,
+  .icon {
+    --fill: red;
+    // only one line needed for both mobile and desktop cases, on desktop icons will appear from
+    // the bottom on mobile they will slide from the right, see code above and media query at the bottom
+    transform: translate(0, 0);
+    z-index: 10;
+  }
+  .share-container_2::after {
+    transform: translateY(-55%) translateX(19%) scale(20);
+  }
+  .share__button {
+    top: 0;
+    transform: translateY(50%);
+  }
+  .share-container_1 {
+    pointer-events: all;
+  }
+  .share-container_2 {
+    pointer-events: all;
+  }
+}
+
+@media (min-width: 1080px) {
+  .share-container_2::after {
+    display: none;
+  }
+  .js {
+    .share {
+      position: absolute;
+      width: max-content;
+      bottom: 0;
+      // transform: translateY(-110%) translateX(90%);
+      transform: translateY(0%) translateX(95%) scaleX(0);
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0);
+      transition: transform 300ms ease-in-out, background 200ms ease;
+      &-container_1 {
+        overflow: visible;
+      }
+      &__button {
+        position: absolute;
+        transform: translateY(-150%);
+      }
+    }
+    .open {
+      .share {
+        background-color: var(--clr-primary-400);
+        transform: translateY(-110%) translateX(90%) scaleX(1);
+        transition: transform 300ms ease-in-out, background 200ms ease;
+      }
+    }
+  }
+}
