@@ -19,3 +19,14 @@ function openShareComponent() {
     shareButton.setAttribute('aria-expanded', 'false');
   }
 }
+
+// embed social share
+
+const link = encodeURI(window.location.href);
+const facebookLink = document.getElementById('facebook-link');
+const twitterLink = document.getElementById('twitter-link');
+const pinterestLink = document.getElementById('pinterest-link');
+facebookLink.href = `https://www.facebook.com/share.php?u=${link}`;
+twitterLink.href = `https://www.twitter.com/share?&url=${link}`;
+pinterestLink.href = `https://www.pinterest.com/pin/create/button/?url=${link}`;
+console.log(facebookLink);
